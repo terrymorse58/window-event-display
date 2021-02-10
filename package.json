@@ -1,0 +1,11 @@
+{
+  "name": "window-event-display",
+  "version": "1.0.0",
+  "description": "displays events sent to document.window",
+  "main": "src/windowevents.js",
+  "scripts": {
+    "demo": "open demo/index.html"
+  },
+  "author": "Terry Morse",
+  "license": "MIT"
+}
