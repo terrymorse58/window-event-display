@@ -1,7 +1,7 @@
 {
   "name": "window-event-display",
-  "version": "1.1.1",
-  "description": "displays events sent to document.window",
+  "version": "1.1.2",
+  "description": "displays events sent to document and window",
   "main": "src/windowevents.js",
   "scripts": {
     "demo": "open demo/index.html"

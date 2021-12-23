@@ -3,7 +3,7 @@
 Display events sent to `document.window`
 ---
 
-![Test of Window Events](media/windowevents-dynamic-400x300.gif)
+![Test of Window Events](https://cdn.jsdelivr.net/npm/window-event-display/media/windowevents-dynamic-400x300.gif)
 
 ## Usage
 
@@ -14,7 +14,7 @@ Display events sent to `document.window`
 </div>
 
 <script
-  src="https://cdn.jsdelivr.net/npm/window-event-display@1.1.0/src/windowevents.js"></script>
+  src="https://cdn.jsdelivr.net/npm/window-event-display@latest/src/windowevents.js"></script>
 <script>
 
 <script>
