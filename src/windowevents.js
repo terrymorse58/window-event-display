@@ -51,20 +51,27 @@ function WindowEvents (olEvents, divEvents) {
     'transitionrun',
     'transitionstart'
   ];
-  eventNames.forEach(function (eventName) {
-    window.addEventListener(eventName, function (evt) {
-      const now = new Date();
-      const timeStr = now.getHours().toString().padStart(2,'0') + ':' +
-        now.getMinutes().toString().padStart(2,'0') + ':' +
-        now.getSeconds().toString().padStart(2,'0') + '.' +
-        now.getMilliseconds();
-      let li = document.createElement('li');
-      li.innerHTML = timeStr + ' - ' + `<code>${evt.type}</code>`;
-      olEvents.appendChild(li);
 
-      // scroll to bottom of list
-      const bottomOffset = divBottom.offsetTop;
-      divEvents.scrollTop = bottomOffset - 10;
-    });
+  function logEvent (evt) {
+    console.log('window event:', evt);
+    if (evt.target !== document && evt.target !== window) {return;}
+
+    const now = new Date();
+    const timeStr = now.getHours().toString().padStart(2, '0') + ':' +
+      now.getMinutes().toString().padStart(2, '0') + ':' +
+      now.getSeconds().toString().padStart(2, '0') + '.' +
+      now.getMilliseconds();
+    let li = document.createElement('li');
+    li.innerHTML = timeStr + ' - ' + `<code>${evt.type}</code>`;
+    olEvents.appendChild(li);
+
+    // scroll to bottom of list
+    const bottomOffset = divBottom.offsetTop;
+    divEvents.scrollTop = bottomOffset - 10;
+  }
+
+
+  eventNames.forEach(function (eventName) {
+    window.addEventListener(eventName, logEvent);
   });
 }
