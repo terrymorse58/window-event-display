@@ -4,7 +4,6 @@
  *
  * @param {HTMLElement} olEvents - <ol> element to contain results
  * @param {HTMLElement} divEvents - parent of <ol>
- * @constructor
  */
 function WindowEvents (olEvents, divEvents) {
   const eventNames = [
@@ -24,7 +23,33 @@ function WindowEvents (olEvents, divEvents) {
     'resize',
     'submit',
     'unload',
-    'beforeunload'
+    'beforeunload',
+    'languagechange',
+    'orientationchange',
+    'devicemotion',
+    'deviceorientation',
+    'storage',
+    'animationcancel',
+    'animationend',
+    'animationiteration',
+    'animationstart',
+    'copy',
+    'cut',
+    'paste',
+    'gamepadconnected',
+    'gamepadisconnected',
+    'hashchange',
+    'DOMContentLoaded',
+    'appinstalled',
+    'beforeinstallprompt',
+    'message',
+    'messageerror',
+    'beforeprint',
+    'afterprint',
+    'transitioncancel',
+    'transitionend',
+    'transitionrun',
+    'transitionstart'
   ];
   eventNames.forEach(function (eventName) {
     window.addEventListener(eventName, function (evt) {
